@@ -1,10 +1,7 @@
-
 ---
 layout: post
-title: Redis fundamental data types and applied scenarios!
+title: Redis type explanation!
 ---
-
-
 |Type       |Label       |Character                           |Scenarios
 |-----------|------------|------------------------------------|----------------------------------------------|
 |String     |Binary safe |can be any type of data,like jpg pic or some serialized obj|                       |

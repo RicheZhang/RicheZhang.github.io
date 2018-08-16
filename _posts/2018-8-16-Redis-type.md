@@ -1,4 +1,8 @@
-# Redis fundamental data types and applied scenarios
+
+---
+layout: post
+title: Redis fundamental data types and applied scenarios!
+---
 
 
 |Type   |Label       |Character|Scenarios|

@@ -313,13 +313,100 @@ LRANGE_300 (first 300 elements): 21195.42 requests per second
 LRANGE_500 (first 450 elements): 14539.11 requests per second
 LRANGE_600 (first 600 elements): 10504.20 requests per second
 MSET (10 keys): 93283.58 requests per second
-~~~
+
 Another example:
-~~~
 $ redis-benchmark -h 127.0.0.1 -p 6379 -t set,lpush -n 10000 -q
 
 SET: 146198.83 requests per second
 LPUSH: 145560.41 requests per second
+
+Get max client:
+
+config get maxclients
+
+1) "maxclients"
+2) "10000"
+
+Maxclients:
+redis-server --maxclients 100000
 ~~~
+
+##Java connection with redis
+~~~
+import redis.clients.jedis.Jedis;
+ 
+public class RedisJava {
+    public static void main(String[] args) {
+        //connect to local Redis service
+        Jedis jedis = new Jedis("localhost");
+        System.out.println("Conection succeed!");
+        //check if it is running
+        System.out.println("Running: "+jedis.ping());
+    }
+}
+~~~
+String instance
+~~~
+import redis.clients.jedis.Jedis;
+ 
+public class RedisStringJava {
+    public static void main(String[] args) {
+         //connect to local Redis service
+        Jedis jedis = new Jedis("localhost");
+        System.out.println("Succeed");
+        //redis string set
+        jedis.set("runoobkey", "www.runoob.com");
+        // get redis string
+        System.out.println("redis stored string: "+ jedis.get("runoobkey"));
+    }
+}
+~~~
+List instance
+~~~
+import java.util.List;
+import redis.clients.jedis.Jedis;
+ 
+public class RedisListJava {
+    public static void main(String[] args) {
+           //connect to local Redis service
+        Jedis jedis = new Jedis("localhost");
+        System.out.println("Scceed");
+        //store data into list
+        jedis.lpush("site-list", "Runoob");
+        jedis.lpush("site-list", "Google");
+        jedis.lpush("site-list", "Taobao");
+        // get the elements from list
+        List<String> list = jedis.lrange("site-list", 0 ,2);
+        for(int i=0; i<list.size(); i++) {
+            System.out.println("Lists items are: "+list.get(i));
+        }
+    }
+}
+~~~
+Keys instance
+~~~
+import java.util.Iterator;
+import java.util.Set;
+import redis.clients.jedis.Jedis;
+ 
+public class RedisKeyJava {
+    public static void main(String[] args) {
+            //connect to local Redis service
+        Jedis jedis = new Jedis("localhost");
+        System.out.println("Succeed");
+ 
+        // get the keys
+        Set<String> keys = jedis.keys("*"); 
+        Iterator<String> it=keys.iterator() ;   
+        while(it.hasNext()){   
+            String key = it.next();   
+            System.out.println(key);   
+        }
+    }
+}
+~~~
+You also can use Lettuce[Java redis client](https://www.baeldung.com/java-redis-lettuce)
+
+
 
 

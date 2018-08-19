@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First post!
+title: First post about Redis basics!
 image: /img/hello_world.jpeg
 ---
 

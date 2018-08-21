@@ -3,6 +3,9 @@ layout: post
 title: First post about Redis basics!
 subtitle:A list of redis commands,enjoy it!
 image: /img/hello_world.jpeg
+gh-repo: richezhang
+gh-badge: [star, fork, follow]
+tags:[redis,cache]
 ---
 
 This is my first post, how exciting!

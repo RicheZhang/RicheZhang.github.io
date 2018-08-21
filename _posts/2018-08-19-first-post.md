@@ -1,6 +1,7 @@
 ---
 layout: post
 title: First post about Redis basics!
+subtitle:A list of redis commands,enjoy it!
 image: /img/hello_world.jpeg
 ---
 

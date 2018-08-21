@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: post
 title: First post about Redis basics!
 subtitle:A list of redis commands,enjoy it!
@@ -7,15 +7,7 @@ gh-repo: richezhang
 gh-badge: [star, fork, follow]
 tags:[redis,cache]
 ---
- -->
----
-layout: post
-title: Test markdown
-subtitle: Each post also has a subtitle
-gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
-tags: [test]
----
+
 This is my first post, how exciting!
 # Redis fundamental data types and applied scenarios
 

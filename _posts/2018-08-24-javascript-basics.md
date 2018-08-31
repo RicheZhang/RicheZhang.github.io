@@ -26,3 +26,5 @@ function changeImage()
 <img id="myimage" onclick="changeImage()" src="/images/pic_bulboff.gif" width="100" height="180">
 ~~~
 
+
+
